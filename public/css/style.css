@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif !important;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.icon {
+  font-size: 2em;
+  text-align: center;
+  padding: 25px;
+  color: white;
+  background-image: url(../images/icon-shape-primary.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image {
+  width: 50px;
+  height: 50px;
+}
+.nav-link {
+  color: white !important;
+}
+
+.nav-item {
+  box-shadow: 0 4px 2px -2px #f9f9f9;
+  transition: transform 0.5s;
+  padding: 5px;
+}
+.nav-item:hover {
+  transform: translateY(-10px);
+  color: var(--dark) !important;
+}
+
+.hero-header {
+  background-color: #006a67 !important;
+  background: url(../images/bg-dot.png), url(../images/bg-dot.png),
+    url(../images/bg-round.png), url(../images/bg-tree.png),
+    url(../images/bg-bottom-hero.png);
+  background-position: 10px 10px, bottom 190px right 10px, left 55% top -1px,
+    left 45% bottom -1px, center bottom -1px;
+  background-repeat: no-repeat;
+}
+.glass-background {
+  background: rgba(105, 219, 197, 0.801);
+  backdrop-filter: blur(10px); /* افکت بلور بر روی پس‌زمینه */
+  border-radius: 15px; /* گوشه‌های گرد */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* فاصله داخلی */
+  border: 1px solid rgba(4, 90, 73, 0.801);
+}
+.maincolor {
+  background-color: #16476a;
+}

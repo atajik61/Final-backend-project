@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Officer</title>
+    <link rel="icon" href="/images/building.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Times New Roman", Times, serif;
+        background-color: #021526;
+        color: white;
+      }
+      .search {
+        width: 150px;
+        height: 40px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <!--welcom user-->
+    <header>
+      <nav class="navbar">
+        <a class="navbar-brand text-white"
+          ><h1 class="d-inline-block mx-2"><b>officer</b></h1></a
+        >
+        <div class="nav mx-2">
+          <div class="search mx-1 bg-info"><i class="fa fa-search"></i></div>
+          <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
+
+          <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+
+          <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!--header-->
+    <!--main-->
+    <div class="container-fluid" style="width: 95%; margin: 0 auto">
+      <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-black">
+          <div
+            class="d-flex flex-column align-items-center align-items-sm-start pt-2 text-white min-vh-100"
+          >
+            <img src="/images/22.png" class="mx-auto image" />
+            <h6 class="mx-auto">Welcome,<%= username %></h6>
+            <h6 class="text-white-50 mx-auto">Officer</h6>
+            <div class="search text-white bg-info text-center mx-auto">
+              View Profile
+            </div>
+            <ul
+              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              id="menu"
+            >
+              <li>
+                <a
+                  href="/officer/officerDashboard"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fa-solid fa-table-columns mx-2 text-white"></i>
+                  <span class="ms-1 d-none d-sm-inline p-2 text-white"
+                    >Dashboard</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/officer/requestManage"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fa-solid fa-chalkboard mx-2 text-info"></i>
+                  <span class="ms-1 d-none d-sm-inline p-2 text-info"
+                    >RequestsManage</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/officer/filterRequests"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fa-solid fa-graduation-cap mx-2 text-info"></i>
+                  <span class="ms-1 d-none d-sm-inline p-2 text-info"
+                    >Filter Requests</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="calender.html" class="nav-link px-0 align-middle">
+                  <i class="fa-solid fa-calendar-days mx-2 text-info"></i>
+                  <span class="ms-1 d-none d-sm-inline p-2 text-info"
+                    >My Calender</span
+                  ></a
+                >
+              </li>
+              
+              <li>
+                <a href="/officer/sendNotification" class="nav-link px-0 align-middle">
+                  <i class="fa-regular fa-message mx-2 text-info"></i>
+                  <span class="ms-1 d-none d-sm-inline p-2 text-info"
+                    >Send Notification</span
+                  >
+                </a>
+              </li>
+              <hr />
+              <li>
+                <a href="../signin" class="nav-link px-0 align-middle">
+                  <i class="fa-solid fa-right-from-bracket mx-2 text-info"></i
+                  ><span class="ms-1 d-none d-sm-inline text-info"
+                    >Log Out</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col col-md-9 col-xl-10 maincolor">
+          <h1>Tables of Requests</h1>
+          <div class="container bg-black m-2">
+            <div class="row bg-info">
+              <div class="col-sm-1 col-md-1 border border-2 p-2">user_id</div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">
+                request_id
+              </div>
+              <div class="col-sm-2 col-md-2 border border-2 p-2">
+                Service_name
+              </div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">Title</div>
+              <div class="col-sm-2 col-md-2 border border-2 p-2">Date</div>
+              <div class="col-sm-2 col-md-2 border border-2 p-2">Document</div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">Status</div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">Edit</div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">Delete</div>
+            </div>
+            <% if (requests && requests.length > 0) { %> <%
+            requests.forEach(request => { %>
+            <div class="row">
+              <div class="col-sm-1 col-md-1 border border-2 p-2 text-center">
+                <%= request.user_id %>
+              </div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2 text-center">
+                <%= request.request_id %>
+              </div>
+              <div class="col-sm-2 col-md-2 border border-2 p-2">
+                <%= request.service_name || 'Unknown Service' %>
+              </div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">
+                <%= request.title %>
+              </div>
+              <div class="col-sm-2 col-md-2 border border-2 p-2">
+                <%= request.created_at %>
+              </div>
+              <div class="col-sm-2 col-md-2 border border-2 p-2">
+                <% if (request.document_path) { %>
+                <a
+                  href="/uploads/<%= request.document_path.split('/').pop() %>"
+                  target="_blank"
+                  >View Document</a
+                >
+                <% } else { %> No Document <% } %>
+              </div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">
+                
+  <form method="POST" action="/officer/update-status">
+    <input type="hidden" name="requestId" value="<%= request.request_id %>" />
+    <select name="newStatus" class="form-control">
+      <option value="pending" <%= request.status === 'pending' ? 'selected' : '' %>>Pending</option>
+      <option value="approved" <%= request.status === 'approved' ? 'selected' : '' %>>Approved</option>
+      <option value="rejected" <%= request.status === 'rejected' ? 'selected' : '' %>>Rejected</option>
+    </select>
+    <button type="submit" class="btn btn-sm btn-primary mt-2">Update Status</button>
+  </form>
+
+              </div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">
+                <a href="/user/edit/<%= request.request_id %>">Edit</a>
+              </div>
+              <div class="col-sm-1 col-md-1 border border-2 p-2">
+                <form method="POST" action="/delete">
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="<%= request.request_id %>"
+                  />
+                  <button
+                    class="btn btn-sm btn-danger"
+                    onclick="return confirm('Are you sure?')"
+                  >
+                    Delete
+                  </button>
+                </form>
+              </div>
+            </div>
+            <% }); %> <% } else { %>
+            <p>No requests found.</p>
+            <% } %>
+          </div>
+          <div class="row bg-info w-50 text-center mx-auto p-2 rounded">
+            <a href="/user/add"
+              ><h3>A New Request</h3>
+              <i class="fa-solid fa-plus px-2 fa-2x"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--main-->
+  </body>
+</html>
